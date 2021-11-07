@@ -1,0 +1,4 @@
+// max  cases  day by day
+select to_date(DATE) as DAY,max(NEW_CASES) from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS"
+group by DAY
+order by DAY asc;
