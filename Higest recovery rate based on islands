@@ -1,0 +1,7 @@
+//Higest recovery rate based on islands
+
+create or replace table INTERVIEW_DB.PLAYGROUND_Tapas_Das.recovery_rate_based_on_islands as 
+select distinct ISLAND,PROVINCE,CASE_RECOVERED_RATE from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS"
+order by CASE_RECOVERED_RATE desc;
+
+select * from INTERVIEW_DB.PLAYGROUND_Tapas_Das.recovery_rate_based_on_islands;
