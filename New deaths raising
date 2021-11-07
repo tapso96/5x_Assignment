@@ -1,0 +1,8 @@
+//New deaths raising
+
+create table INTERVIEW_DB.PLAYGROUND_Tapas_Das.new_death_factor as
+select to_date(DATE) as DAY,max(GROWTH_FACTOR_OF_NEW_DEATHS	) as raisingdeaths from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS"
+group by DAY
+order by DAY asc;
+
+select * from INTERVIEW_DB.PLAYGROUND_Tapas_Das.new_death_factor
