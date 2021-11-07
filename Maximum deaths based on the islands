@@ -1,0 +1,8 @@
+///deaths based on the islands
+create table deaths_based_on_the_islands as select distinct TOTAL_DEATHS,PROVINCE,ISLAND from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS";
+
+//maximum deaths based on the islands
+
+select ISLAND,max(TOTAL_DEATHS) from INTERVIEW_DB.PLAYGROUND_Tapas_Das.deaths_based_on_the_islands
+group by ISLAND 
+order by max(TOTAL_DEATHS) desc ;
