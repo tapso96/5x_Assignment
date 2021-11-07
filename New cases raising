@@ -1,0 +1,6 @@
+//New cases raising 
+create or replace table INTERVIEW_DB.PLAYGROUND_Tapas_Das.heavynewcases_raising as select GROWTH_FACTOR_OF_NEW_CASES,ISLAND,PROVINCE from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS"
+where GROWTH_FACTOR_OF_NEW_CASES is not null
+order by GROWTH_FACTOR_OF_NEW_CASES desc;
+
+select * from INTERVIEW_DB.PLAYGROUND_Tapas_Das.heavynewcases_raising
