@@ -1,0 +1,8 @@
+//Covid Deaths based on Days
+
+create or replace table INTERVIEW_DB.PLAYGROUND_Tapas_Das.case_raising_day_by_day as
+select  to_date(DATE) as DAY,sum(TOTAL_DEATHS) AS DEATHS  from "FIVETRAN_INTERVIEW_DB"."GOOGLE_SHEETS"."COVID_19_INDONESIA_TAPAS_DAS"
+group by DATE
+order by to_date(DATE) asc ;
+
+ select * from INTERVIEW_DB.PLAYGROUND_Tapas_Das.case_raising_day_by_day
